@@ -18,7 +18,7 @@ import java.awt.event.MouseEvent;
 public class VentanaPrincipal {
 
 	private JFrame frame;
-	private int DIMENSION= 8;
+	private int DIMENSION= 2;
 	JPanel squares[][] = new JPanel[DIMENSION][DIMENSION];
 	
 	public static void main(String[] args) {
@@ -57,7 +57,7 @@ public class VentanaPrincipal {
 		final JInternalFrame internalFrame = new JInternalFrame("Board");
 		frame.getContentPane().add(internalFrame, BorderLayout.CENTER);
 		internalFrame.setVisible(false);
-		internalFrame.getContentPane().setLayout(new GridLayout(8, 8));
+		internalFrame.getContentPane().setLayout(new GridLayout(DIMENSION, DIMENSION));
 
 		for (int i = 0; i < DIMENSION; i++) {
 			for (int j = 0; j < DIMENSION; j++) {
