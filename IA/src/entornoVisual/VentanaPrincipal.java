@@ -18,7 +18,8 @@ import java.awt.event.MouseEvent;
 public class VentanaPrincipal {
 
 	private JFrame frame;
-	JPanel squares[][] = new JPanel[8][8];
+	private int DIMENSION= 8;
+	JPanel squares[][] = new JPanel[DIMENSION][DIMENSION];
 	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -58,8 +59,8 @@ public class VentanaPrincipal {
 		internalFrame.setVisible(false);
 		internalFrame.getContentPane().setLayout(new GridLayout(8, 8));
 
-		for (int i = 0; i < 8; i++) {
-			for (int j = 0; j < 8; j++) {
+		for (int i = 0; i < DIMENSION; i++) {
+			for (int j = 0; j < DIMENSION; j++) {
 				squares[i][j] = new JPanel();
 				if ((i + j) % 2 == 0) {
 					squares[i][j].setBackground(Color.black);
