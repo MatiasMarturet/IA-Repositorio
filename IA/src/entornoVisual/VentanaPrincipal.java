@@ -62,6 +62,16 @@ public class VentanaPrincipal {
 		for (int i = 0; i < DIMENSION; i++) {
 			for (int j = 0; j < DIMENSION; j++) {
 				squares[i][j] = new JPanel();
+				
+				squares[i][j].addMouseListener(new MouseAdapter(){
+					@Override
+					public void mouseClicked(MouseEvent e) {
+						JPanel s = (JPanel)e.getComponent();
+						s.setBackground(Color.BLUE);
+						s.repaint();
+					} 
+				});
+				
 				if ((i + j) % 2 == 0) {
 					squares[i][j].setBackground(Color.black);
 				} else {
